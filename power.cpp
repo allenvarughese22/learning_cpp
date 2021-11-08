@@ -1,15 +1,18 @@
 #include <iostream>
+#include <typeinfo>
 using namespace std;
 
 int main(){
     double power(double,int = 2 );
     
     double number;
+    
     int pow;
     char yesorno;
 
     cout<<"enter the number to be raised"<<endl;
     cin>> number;
+    cout<<typeid(number).name();
     cout<<" want to enter a power (y/n)?"<<endl;
     cin>> yesorno;
     if (yesorno == 'y')
@@ -20,7 +23,7 @@ int main(){
 
         
     }
-    else{
+    else {
         power (number);
     }
        
