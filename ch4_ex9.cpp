@@ -38,4 +38,5 @@ cin>> second_fraction.denominator;
 sum_struct.numerator =  first_fraction.numerator*second_fraction.denominator + first_fraction.denominator*second_fraction.numerator;
 sum_struct.denominator= first_fraction.denominator*second_fraction.denominator;
 cout << "Sum "<<sum_struct.numerator<<"/"<<sum_struct.denominator1;
+
 }
