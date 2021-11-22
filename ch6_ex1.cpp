@@ -25,8 +25,8 @@ void add_int(Int val1,Int val2){
 int main(){
 Int a;
 Int b(4), c{10};
-
+a.add_int(b,c);
 cout<<"hello"<<endl;
-c.disp();
+a.disp();
 return 0 ;
 } 
