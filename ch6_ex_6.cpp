@@ -118,9 +118,6 @@ cout <<"details of third employee"<<endl;
 e3.get_data();
 
 
-
-
-
 return 0;
 
 }
