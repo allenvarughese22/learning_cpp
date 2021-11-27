@@ -1,116 +1,98 @@
-// on process
-
-// Revise the four-function fraction calculator from Exercise 12, Chapter 4, so that it uses
-// functions for each of the four arithmetic operations. They can be called fadd(), fsub(),
-// fmul(), and fdiv(). Each of these functions should take two arguments of type struct
-// fraction, and return an argument of the same type.
-
-
 #include <iostream>
 
 using namespace std;
 
-struct fraction{
+class fraction{
     // numerator and denominator are taken as int. if wanted can be modified to double type
-int num;
-int den;
-double f_ans;
-};
-
-// struct fraction{
-// int ans;
-
-// };
-
-int main(){
-// double a,b,c,d;
-//double ans;
-// char temp;
+private:
+double first_num, first_den, second_num, second_den, f_ans;
 char op;
-// fraction ans;
-//defining the functions;
-fraction f_mul(fraction f1, fraction f2);
-fraction f_add(fraction f1, fraction f2);
-fraction f_div(fraction f1, fraction f2);
-fraction f_sub(fraction f1, fraction f2);
+char temp;
 
-fraction f1,f2,f_struct_return_storage;   
-cout<<"enter the first fraction numberator"<< endl;
-cin>> f1.num ;
-cout<<"enter the first fraction denominator"<< endl;
-cin>> f1.den ;
+public:
+void f_add();
+void f_div();
+void f_sub();
+void f_mul();
+
+get_data(){
+cout<<"enter the fraction in the form a/b"<< endl;
+cin>> first_num>>temp >> first_den ;
+
 cout<<"enter the operator"<< endl;
 cin>> op ;
-cout<<"enter the second fraction numerator"<< endl;
-cin>> f2.num ;
-cout<<"enter the second fraction denominator"<< endl;
-cin>> f2.den ;
+
+cout<<"enter the fraction in the form a/b"<< endl;
+cin>> second_num>>temp >> second_den ;}
 
 
-switch (op)
-{
+get_solution(){
+    switch (op)
+ {
 case '*':
-    // cout<<"the value of operator is "<< op<< endl;
-    
-    //f_struct_return_storage=  f_mul(f1 , f2);
-    cout<< "the final answer is " <<f_mul(f1 , f2).f_ans<<endl;
-    // ans = (f1.num*f2.num)/(f1.den*f2.den);
-     
+    f_mul();
+ 
     break;
 
 case '+':
-    // cout<<"the value of operator is "<< op<< endl;
-    // ans = (f1.num*f2.den + f1.den*f2.num)/(f1.den/f2.den);
-    f_struct_return_storage=  f_add(f1 , f2);
-    cout<< "the final answer is " <<f_struct_return_storage.f_ans<<endl;
+    f_add();
     break;
 
 case '-':
-    // cout<<"the value of operator is "<< op<< endl;
-    // ans = (f1.num*f2.den - f1.den*f2.num)/(f1.den/f2.den);
-    f_struct_return_storage=  f_sub(f1 , f2);
-    cout<< "the final answer is " <<f_struct_return_storage.f_ans<<endl;
+
+    f_sub();
     break;
 
 case '/':
-    //cout<<"the value of operator is "<< op<< endl;
-    // cout<<a<<b<<c<<d;
-    // ans = (f1.num*f2.den)/(f1.den*f2.den);
-    f_struct_return_storage=  f_div(f1 , f2);
-    cout<< "the final answer is " <<f_struct_return_storage.f_ans<<endl;
+    f_div();    
     break;
 
 default:
     break;
 
     }
-   
+
+}
+};
+
+
+
+int main(){
+
+fraction f1;   
+
+f1.get_data();
+f1.get_solution();
+
+return 0;  
 }
 
-fraction f_mul(fraction f1 ,fraction f2)
-{ fraction ans;
-     ans.f_ans =  (f1.num*f2.num)/(f1.den*f2.den);
+
+
+void fraction::f_add()
+{f_ans = ((first_num*second_den + first_den*second_num)/(first_den*second_den));
+cout<<"final answer" << f_ans<<endl;
+   }
+
+void fraction::f_div()
+{ 
+f_ans = (first_num*second_den)/(first_den*second_num);
+
+cout<<"final answer" << f_ans<<endl;
+}
+
+void fraction::f_mul()
+{ f_ans =  (first_num*second_num)/(first_den*second_den);
+cout<<"final answer" << f_ans<<endl;
+
     
-
-return ans;
 }
-fraction f_add(fraction f1 ,fraction f2)
-{fraction ans;
-    ans.f_ans = ((f1.num*f2.den + f1.den*f2.num)/(f1.den*f2.den));
-   
-return ans;}
-
-fraction  f_sub(fraction f1 ,fraction f2)
-{fraction ans;
-    ans.f_ans = (f1.num*f2.den - f1.den*f2.num)/(f1.den*f2.den);
-return ans;}
-
-fraction  f_div(fraction f1 ,fraction f2)
-{ fraction ans;
-ans.f_ans = (f1.num*f2.den)/(f1.den*f2.den);
-return ans;}
 
 
+void fraction::f_sub()
+{f_ans = (first_num*second_den - first_den*second_num)/(first_den*second_den);
+cout<<"final answer" << f_ans<<endl;
+}
 
 
 
