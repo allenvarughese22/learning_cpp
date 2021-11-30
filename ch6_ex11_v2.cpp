@@ -27,11 +27,11 @@ cin>> num>>temp >> den ;
 
 
 get_solution(fraction f1,fraction f2, char op){
-    switch (op)
+switch (op)
+
  {
 case '*':
-    f_mul(f1 ,f2);
- 
+    f_mul(f1 ,f2); 
     break;
 
 case '+':
