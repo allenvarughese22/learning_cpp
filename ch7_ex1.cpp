@@ -17,13 +17,15 @@ int main()
 void reversit(char sent[])
 {
 
-    int len = strlen(sent);
+    int len = strlen(sent)+1;
     char rev[len];
+    rev[len] = '\0';
     for (int i = 0; i < strlen(sent); i++)
     {
 
-        rev[len] = sent[i];
-        len--;
+        rev[len-1] = sent[i];
+        --len;
     }
+    
     cout << rev << endl;
 }
