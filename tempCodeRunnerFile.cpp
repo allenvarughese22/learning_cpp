@@ -1,2 +1,3 @@
-cout<<sizeof(list)<<endl;
-// cout<<(sizeof(list[0]))<<endl;
+  pure[index_pure] = array[i];
+            cout << int(array[i])<< endl;
+            index_pure++;

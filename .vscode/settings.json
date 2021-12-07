@@ -7,6 +7,18 @@
         "initializer_list": "cpp",
         "type_traits": "cpp",
         "xstring": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "tuple": "cpp",
+        "iomanip": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "string": "cpp",
+        "typeinfo": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "cstdlib": "cpp"
     }
 }
