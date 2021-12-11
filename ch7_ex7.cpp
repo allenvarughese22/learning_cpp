@@ -1,14 +1,11 @@
 #include <iostream>
-#include<cstdlib>
+#include <cstdlib>
 #include <stdlib.h>
-#include <cmath> 
-#include <iostream>
-#include <stdlib.h>
+#include <cmath>
 #include <cstring>
 #include <math.h>
 #include <stdlib.h>
-#include <cstring>
-#include <typeinfo>
+
 using namespace std;
 const int size = 100;
 
@@ -49,15 +46,19 @@ void mstold(char array[])
     pure[index_pure] = '\0';
     cout << "pure" << endl;
     cout << pure << endl;
-    long double  money = _atof_l(pure);
+    long double money = atof(pure);
+    long double money2 = strtold(pure,NULL);
+    cout << "money" << endl;
     cout << money << endl;
+    cout << "money_2" << endl;
+    cout << money2 << endl;
+
+
 
     // furhter improvement
     // atoi is working and converting the string array to int
     // however the array to double is not working
     // require more expertice on this
-
-
 
     // return money and change the return type of function
 }

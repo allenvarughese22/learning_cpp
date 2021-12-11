@@ -6,6 +6,10 @@ int main()
     int size_list;
     cout << "enter the number of elements you want to store in array" << endl;
     cin >> size_list;
+
+    // i think this type of getting array lenght from user during compilation is 
+    // not supported in standard c++
+    
     int list[size_list];
     int maxint(int[], int);
 
