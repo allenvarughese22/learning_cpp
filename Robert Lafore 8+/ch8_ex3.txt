@@ -1,0 +1,3 @@
+Modify the time class from Exercise 3 in Chapter 6 so that instead of a function
+add_time() it uses the overloaded + operator to add two times. Write a program to test
+this class.
