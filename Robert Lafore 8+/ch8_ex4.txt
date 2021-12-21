@@ -1,0 +1,7 @@
+Create a class Int based on Exercise 1 in Chapter 6. Overload four integer arithmetic
+operators (+, -, *, and /) so that they operate on objects of type Int. If the result of any
+such arithmetic operation exceeds the normal range of ints (in a 32-bit environment)—
+from 2,147,483,648 to –2,147,483,647—have the operator print a warning and terminate
+the program. Such a data type might be useful where mistakes caused by arithmetic overflow
+are unacceptable. Hint: To facilitate checking for overflow, perform the calculations
+using type long double. Write a program to test this class.
