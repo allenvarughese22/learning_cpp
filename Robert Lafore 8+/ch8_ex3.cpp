@@ -1,52 +1,137 @@
 #include <iostream>
 using namespace std;
 
-class time{
-    private:
-    int hr,min,sec;
+class time
+{
+private:
+    int hr, min, sec;
 
+public:
+    time() : hr{0}, min{0}, sec{0} {}
+    time(int hr, int min, int sec) : hr{hr}, min{min}, sec{sec} {}
 
-    public:
-    time():hr{0},min{0},sec{0}{}
-    time(int hr,int min, int sec):hr{hr},min{min},sec{sec}{}
-
-    void display(){
-        cout<< "the time is "<<hr<<":"<<min<<":"<<sec<<endl;
+    void display()
+    {
+        cout << "the time is " << hr << ":" << min << ":" << sec << endl;
     }
 
+    // operator overloading to add time
 
-    //operator overloading to add time
+    time operator+(time b)
+    {
 
-    time operator + ( time b){
+        // providing temp integers m,h,s to do calculation
+        int m = 0, h = 0;
+        int s = sec + b.sec;
 
-        // providing temp integers m,h,s to do calculation 
-        int m=0,h=0;
-        int s = sec + b.sec;        
-      
-        if (s>59){ s -=60; m++;}
+        if (s > 59)
+        {
+            s -= 60;
+            m++;
+        }
         m += min + b.min;
-        if (m>59){ m -=60; h++;}
+        if (m > 59)
+        {
+            m -= 60;
+            h++;
+        }
         h += hr + b.hr;
-        
 
-        return time(h,m,s);
-
-
+        return time(h, m, s);
     }
 
+    // prefex ++ overloading
+    time operator++()
+    {
+        hr = hr + 1;
+        return time(hr, min, sec);
+    }
+
+<<<<<<< HEAD
+    }
+=======
+    // profix ++ overloading
+    time operator++(int)
+    {
+        return time(hr++, min, sec);
+    }
+
+    // profix --overloading
+    time operator--(int)
+    {
+        return time(hr--, min, sec);
+    }
+
+    // prefix --overloading
+    time operator--()
+    {
+        return time(--hr, min, sec);
+    }
 };
 
+int main()
+{
+    time t1(1, 2, 42);
+    time t2;
 
-int main(){
-time t1(1,2,42);
-time t2 (5,20, 30);
-time t3;
+    cout << "\nt1 \t";
+    t1.display();
+    cout << endl;
+    t2 = t1;
+    cout << "on applying t2 = t1 ";
+    cout << "\nt2 \t";
+    t2.display();
+    cout << endl;
+    cout << "\non applying t2 = ++t1 ";
+    t2 = ++t1;
+    cout << "\nt1 \t";
+    t1.display();
+    cout << endl;
+    cout << "\nt2 \t";
+    t2.display();
+    cout << endl;
 
-// adding two time with the '+' operator.
+    cout << "\non applying t2 = t1++ ";
+    t2 = t1++;
+    cout << "\nt1 \t";
+    t1.display();
+    cout << endl;
+    cout << "\nt2 \t";
+    t2.display();
+    cout << endl;
 
-t3 = t2 + t1;
-t3.display();
+    t2 = t1;
+    cout << "on applying t2 = t1 ";
+    cout << "\nt1 \t";
+    t1.display();
+    cout << "\nt2 \t";
+    t2.display();
 
-return 0;
+    cout << "\non applying t2 = t1-- ";
+    t2 = t1--;
+    cout << "\nt1 \t";
+    t1.display();
+    cout << endl;
+    cout << "\nt2 \t";
+    t2.display();
+    cout << endl;
 
-    }
+    t2 = t1;
+    cout << "on applying t2 = t1 ";
+    cout << "\nt1 \t";
+    t1.display();
+    cout << "\nt2 \t";
+    t2.display();
+
+    cout << "\non applying t2 = --t1 ";
+    t2 = --t1;
+    cout << "\nt1 \t";
+    t1.display();
+    cout << endl;
+    cout << "\nt2 \t";
+    t2.display();
+    cout << endl;
+
+    return 0;
+}
+>>>>>>> 3d11109552503ed1a92b17d51b083a1482a5d572
