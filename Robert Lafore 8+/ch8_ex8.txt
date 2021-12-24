@@ -1,0 +1,28 @@
+Modify the bMoney class from Exercise 12 in Chapter 7, “Arrays and Strings,” to include
+the following arithmetic operations, performed with overloaded operators:
+bMoney = bMoney + bMoney
+bMoney = bMoney - bMoney
+bMoney = bMoney * long double (price per widget times number of widgets)
+long double = bMoney / bMoney (total price divided by price per widget)
+bMoney = bMoney / long double (total price divided by number of widgets)
+Notice that the / operator is overloaded twice. The compiler can distinguish between the
+two usages because the arguments are different. Remember that it’s easy to perform
+arithmetic operations on bMoney objects by performing the same operation on their long
+double data.
+Make sure the main() program asks the user to enter two money strings and a floatingpoint
+number. It should then carry out all five operations and display the results. This
+should happen in a loop, so the user can enter more numbers if desired.
+Some money operations don’t make sense: bMoney * bMoney doesn’t represent anything
+real, since there is no such thing as square money; and you can’t add bMoney to long
+double (what’s dollars plus widgets?). To make it impossible to compile such illegal
+operations, don’t include conversion operators for bMoney to long double or long
+double to bMoney. If you do, and you write an expression like
+bmon2 = bmon1 + widgets; // doesn’t make sense
+then the compiler will automatically convert widgets to bMoney and carry out the addition.
+Without them, the compiler will flag such conversions as errors, making it easier to catch
+conceptual mistakes. Also, make any conversion constructors explicit.
+There are some other plausible money operations that we don’t yet know how to perform
+with overloaded operators, since they require an object on the right side of the operator
+but not the left:
+long double * bMoney // can’t do this yet: bMoney only on right
+long double / bMoney // can’t do this yet: bMoney only on right

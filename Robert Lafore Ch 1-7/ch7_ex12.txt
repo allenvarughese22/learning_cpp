@@ -1,0 +1,22 @@
+
+
+/*Create a class called bMoney. It should store money amounts as long doubles. Use the
+function mstold() to convert a money string entered as input into a long double, and
+the function ldtoms() to convert the long double to a money string for display. (See
+Exercises 6 and 10.) You can call the input and output member functions getmoney()
+and putmoney(). Write another member function that adds two bMoney amounts; you can
+call it madd(). Adding bMoney objects is easy: Just add the long double member data
+amounts in two bMoney objects. Write a main() program that repeatedly asks the user to
+enter two money strings, and then displays the sum as a money string. Here’s how the
+class specifier might look:
+class bMoney
+{
+private:
+long double money;
+public:
+bMoney();
+bMoney(char s[]);
+void madd(bMoney m1, bMoney m2);
+void getmoney();
+void putmoney()
+*/
