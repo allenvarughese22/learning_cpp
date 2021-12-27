@@ -1,0 +1,12 @@
+Recall the STRCONV example from Chapter 8. The String class in this example has a
+flaw: It does not protect itself if its objects are initialized to have too many characters.
+(The SZ constant has the value 80.) For example, the definition
+String s = “This string will surely exceed the width of the “
+“screen, which is what the SZ constant represents.”;
+will cause the str array in s to overflow, with unpredictable consequences, such as
+crashing the system.
+With String as a base class, derive a class Pstring (for “protected string”) that prevents
+buffer overflow when too long a string constant is used in a definition. A new constructor
+in the derived class should copy only SZ–1 characters into str if the string constant is
+longer, but copy the entire constant if it’s shorter. Write a main() program to test different
+lengths of strings.
