@@ -1,0 +1,16 @@
+Derive a class called employee2 from the employee class in the EMPLOY program in this
+chapter.
+
+This new class should add a type double data item called compensation, and
+also an enum type called period to indicate whether the employee is paid hourly, weekly,
+or monthly.
+
+For simplicity you can change the manager, scientist, and laborer classes
+so they are derived from employee2 instead of employee.
+
+However, note that in many
+circumstances it might be more in the spirit of OOP to create a separate base class called
+compensation and three new classes manager2, scientist2, and laborer2, and use
+multiple inheritance to derive these three classes from the original manager, scientist,
+and laborer classes and from compensation. This way none of the original classes
+needs to be modified.

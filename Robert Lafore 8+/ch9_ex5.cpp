@@ -42,7 +42,7 @@ public:
     {
         cout << "enter the compensation amount" << endl;
         cin >> compensation;
-        cout << "enter the compensation period. \n Type 'h' for hourly, 'm' for montly"
+        cout << "enter the compensation period. \t Type 'h' for hourly, 'm' for montly"
                 "'w' for weekly basis"
              << endl;
         cin >> compen_period_user_input;
@@ -68,7 +68,7 @@ public:
 
     void putdata()
     {
-        cout << "the compensation amount is " << compensation << endl;
+        cout << "\n the compensation amount is " << compensation << endl;
 
         cout << "the period of compensation is " << endl;
 
@@ -142,11 +142,13 @@ public:
     void getdata()
     {
         manager::getdata();
+        compensation::getdata();
     }
 
     void putdata()
     {
         manager::putdata();
+        compensation::putdata();
     }
 };
 
@@ -156,17 +158,31 @@ public:
     void getdata()
     {
         scientist::getdata();
+        compensation::getdata();
     }
 
     void putdata()
     {
         scientist::putdata();
+        compensation::putdata();
     }
 };
 
-// class labourer2 : public compensation, public labourer
-// {
-// };
+class laborer2 : public compensation, public laborer
+{
+public:
+    void getdata()
+    {
+        laborer::getdata();
+        compensation::getdata();
+    }
+
+    void putdata()
+    {
+        laborer::getdata();
+        compensation::putdata();
+    }
+};
 
 ////////////////////////////////////////////////////////////////
 
@@ -175,7 +191,7 @@ int main()
 {
     manager2 m1, m2;
     scientist2 s1;
-    labourer2 l1;
+    laborer2 l1;
     cout << endl; // get data for several employees
     cout << "\nEnter data for manager 1";
     m1.getdata();
