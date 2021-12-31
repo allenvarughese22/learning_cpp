@@ -1,4 +1,6 @@
-// copied the employ program from textbook
+// copied the template - employ program from textbook
+// coded the compensation class , manager 2, scientist2, laborer2 class
+//upgraded the code to handle ambiguity in multiple inheritance
 
 #include <iostream>
 using namespace std;
