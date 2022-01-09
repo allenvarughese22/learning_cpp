@@ -22,17 +22,20 @@ public:
     }
 };
 
-class date
+class date_class
 {
 protected:
     int month, date, year;
     char temp;
 
 public:
+
+
     void getdate()
     {
         cout << "enter the date of publication in dd/mm/yyyy format" << endl;
         cin >> date >> temp >> month >> temp >> year;
+        
     }
 
     void showdate()
@@ -42,7 +45,7 @@ public:
     }
 };
 
-class publication2 : public publication, public date
+class publication2 : public publication, public date_class
 {
     // date date_of_publication;
 
@@ -50,13 +53,13 @@ public:
     void getdata()
     {
         publication::getdata();
-        date::getdate();
+        date_class:getdate();
     }
 
     void putdata()
     {
         publication::putdata();
-        date::showdate();
+        date_class::showdate();
     }
 };
 

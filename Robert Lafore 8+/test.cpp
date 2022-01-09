@@ -1,28 +1,47 @@
 #include <iostream>
 using namespace std;
-class Base
+
+class base
 {
+private:
+	int value;
+
 public:
-	int f(int i)
+	void set_value()
 	{
-		cout << "f(int): ";
-		return i+3;
+		cout << "enter the value" << endl;
+		cin >> value;
+	}
+
+	void show_value()
+	{
+		cout << "the value is " << value << endl;
 	}
 };
-class Derived : public Base
+
+class derived : public base
+{
+};
+
+class grand_child : public derived
 {
 public:
-	double f(double d)
+	void set_value()
 	{
-		cout << "f(double): ";
-		return d+3.3;
+		cout << "indirect" << endl;
+		base::set_value();
 	}
 };
+
 int main()
 {
-	Derived* dp = new Derived;
-	cout << dp->f(3) << '\n';
-	cout << dp->f(3.3) << '\n';
-	delete dp;
+	// derived a;
+	// a.set_value();
+	// a.show_value();
+
+	// cannot access
+	grand_child b;
+	b.set_value();
+	b.show_value();
 	return 0;
 }
