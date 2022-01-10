@@ -1,0 +1,10 @@
+Start with the String class from the NEWSTR example in this chapter.
+
+Add a member
+function called upit() that converts the string to all uppercase.
+
+You can use the
+toupper() library function, which takes a single character as an argument and returns a
+character that has been converted (if necessary) to uppercase.
+
+This function uses the CCTYPE header file. Write some code in main() to test upit().
