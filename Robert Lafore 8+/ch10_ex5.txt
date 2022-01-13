@@ -1,0 +1,11 @@
+Suppose you have a main() with three local arrays, all the same size and type (say
+float). 
+The first two are already initialized to values. Write a function called
+addarrays() that accepts the addresses of the three arrays as arguments;
+ adds the contents
+of the first two arrays together, element by element; and places the results in the
+third array before returning.
+
+A fourth argument to this function can carry the size of the
+arrays. Use pointer notation throughout; the only place you need brackets is in defining
+the arrays.

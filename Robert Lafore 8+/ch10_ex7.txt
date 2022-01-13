@@ -1,0 +1,11 @@
+Modify the person class in the PERSORT program in this chapter so that it includes not
+only a name, but also a salary item of type float representing the person’s salary.
+You’ll need to change the setName() and printName() member functions to setData()
+and printData(), and include in them the ability to set and display the salary as well as
+the name. You’ll also need a getSalary() function. Using pointer notation, write a
+salsort() function that sorts the pointers in the persPtr array by salary rather than by
+name. Try doing all the sorting in salsort(), rather than calling another function as
+PERSORT does. If you do this, don’t forget that -> takes precedence over *, so you’ll need
+to say
+if( (*(pp+j))->getSalary() > (*(pp+k))->getSalary() )
+{ /* swap the pointers */ }

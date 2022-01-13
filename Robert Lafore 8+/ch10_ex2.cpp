@@ -32,7 +32,7 @@ public:
         {
             *(str+i) = toupper(*(str+i));
             cout<<"in"<<endl;
-            cout<<*(str+i);
+            // cout<<*(str+i);
             i++;
         }
         
