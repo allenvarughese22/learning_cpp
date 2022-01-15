@@ -18,6 +18,7 @@ int main()
     int a = 5;
     int *ptr_int = &a;
       cout << "the address of ptr_int in main  function is :" << &ptr_int << endl;
+      cout << "the value of  ptr_int in main  function is :" << ptr_int << endl;
 
     call_fun(ptr_int);
 

@@ -11,7 +11,7 @@ int main()
     // correct way to initialize string literal is :
     char const *b = "this will print without error";
 
-    // char const * b = "this will print without error"; //will not work as const is at wrong place
+    // char const * b = ; //will not work as const is at wrong place
 
     cout<<a<<endl;
     cout << b << endl;

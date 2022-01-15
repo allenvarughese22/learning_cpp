@@ -1,0 +1,9 @@
+Year 2022
+
+Week 2:
+
+basics of lvalue and rvalue
+pointer decay in array
+pointer to array (declaration and passing address value)
+array of pointers
+basics of multi-dimensional array
