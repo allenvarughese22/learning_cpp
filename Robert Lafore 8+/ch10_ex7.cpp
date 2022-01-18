@@ -1,5 +1,6 @@
-//copying the template base code from the textbook
-
+// copying the template base code from the textbook
+// as the template from textbook was used nothing much was
+// done in this code.. 95% same as the textbook
 
 #include <iostream>
 #include <string> //for string class
@@ -9,20 +10,36 @@ class person // class of persons
 {
 protected:
     string name; // person's name
+    float salary;
 public:
-    void setName() // set the name
+    void setData() // set the name
     {
         cout << "Enter name: ";
         cin >> name;
+        cout << "Enter your salary: ";
+        cin >> salary;
     }
-    void printName() // display the name
+    void printData() // display the name
     {
         cout << endl
              << name;
+
+        cout << endl
+             << salary;
     }
+
+    // prsPtr -> salary cannot be used
+    // as the salary is protected
+    //so we need a funtion to get the value from the protected class
+    
     string getName() // return the name
     {
         return name;
+    }
+
+    float getSalary() // return the name
+    {
+        return salary;
     }
 };
 ////////////////////////////////////////////////////////////////
@@ -35,7 +52,7 @@ int main()
     do
     {                                    // put persons in array
         persPtr[n] = new person;         // make new object
-        persPtr[n]->setName();           // set person's name
+        persPtr[n]->setData();           // set person's name
         n++;                             // count new person
         cout << "Enter another (y/n)? "; // enter another
         cin >> choice;                   // person?
@@ -43,15 +60,15 @@ int main()
 
     while (choice == 'y'); // quit on ‘n'
     cout << "\nUnsorted list:";
-        for (int j = 0; j < n; j++) // print unsorted list
+    for (int j = 0; j < n; j++) // print unsorted list
     {
-        persPtr[j]->printName();
+        persPtr[j]->printData();
     }
     bsort(persPtr, n); // sort pointers
     cout << "\nSorted list:";
-        for (int j = 0; j < n; j++) // print sorted list
+    for (int j = 0; j < n; j++) // print sorted list
     {
-        persPtr[j]->printName();
+        persPtr[j]->printData();
     }
     cout << endl;
     return 0;
@@ -68,7 +85,7 @@ void bsort(person **pp, int n) // sort pointers to persons
 //--------------------------------------------------------------
 void order(person **pp1, person **pp2) // orders two pointers
 {                                      // if 1st larger than 2nd,
-    if ((*pp1)->getName() > (*pp2)->getName())
+    if ((*pp1)->salary > (*pp2)->getSalary())
     {
         person *tempptr = *pp1; // swap the pointers
         *pp1 = *pp2;
