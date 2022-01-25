@@ -16,18 +16,21 @@ public:
     long long maxSubarraySum(int arr[], int n)
     {
 
+// initializing a vector list  to store the summation value for loop
         vector<int> summation_array;
         int start = 0, end = 0;
         int sum_loop_array = 0;
 
         for (int j = 0; j < n; j++)
         {
+            //storing the summation value for each loop
             int sum_loop_array = 0;
             for (int i = j; i < n; i++)
             {
                 sum_loop_array += arr[i];
                 if (!summation_array.empty())
                 {
+                    // writing the array starting and ending value for maximum value
                     int max_ele = *max_element(summation_array.begin(), summation_array.end());
                     if (sum_loop_array > max_ele)
                     {
@@ -39,11 +42,11 @@ public:
             }
         }
 
-        cout << "//" << endl;
-        cout << "start" << start << endl;
-        cout << "end" << end << endl;
+        // cout << "//" << endl;
+        // cout << "start" << start << endl;
+        // cout << "end" << end << endl;
 
-        cout << "//" << endl;
+        // cout << "//" << endl;
         long long final_ans = 0;
         for (int z = start; z <= end; z++)
         {
