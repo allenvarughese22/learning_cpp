@@ -11,7 +11,7 @@ using namespace std;
 class sort_m
 {
 public:
-    vector<vector<int>> sortedMatrix(int N, vector<vector<int>> Mat)
+    void sortedMatrix(int N, vector<vector<int>> Mat)
     {
         deque<int> raw_m;
         for (int i = 0; i < N; i++)
