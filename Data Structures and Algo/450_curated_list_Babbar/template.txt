@@ -1,0 +1,18 @@
+
+class cl
+{
+    public:
+    vector<int> valueEqualToIndex(int arr[], int n)
+    {
+    }
+};
+
+int main()
+{
+    cl obj;
+    int arr[] = {15, 2, 45, 12, 7};
+    int n = sizeof(arr[0]) / sizeof(arr[0]);
+    obj.valueEqualToIndex( arr,  n);
+
+    return 0;
+}
