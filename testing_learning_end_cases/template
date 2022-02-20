@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class cl
+{
+    public:
+
+};
+int main ()
+{
+    cl obj;
+    obj.______;
+    return 0;
+}
