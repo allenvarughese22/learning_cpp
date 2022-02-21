@@ -2,27 +2,29 @@
 
 // There is only one repeated number in nums, return this repeated number.
 
-// You must solve the problem without modifying the array nums and uses only constant extra space. 
- 
- #include <iostream>
- using namespace std;
- #include <vector>
- #include <map>
+// You must solve the problem without modifying the array nums and uses only constant extra space.
 
- class Solution {
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <map>
+
+class Solution
+{
 public:
-    int findDuplicate(vector<int>& nums) {
-        map<int, int> count;
-    for (int i = 0; i < nums.size(); i++) 
+    int findDuplicate(vector<int> &nums)
     {
-        count[nums[i]]++;
-    }
-        
-         for (auto it : count)
-   {
-        if (it.second > 1)
-            return it.first;
-    }
+        map<int, int> count;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            count[nums[i]]++;
+        }
+
+        for (auto it : count)
+        {
+            if (it.second > 1)
+                return it.first;
+        }
         return -1;
     }
 };
@@ -30,9 +32,9 @@ public:
 int main()
 {
 
-vector <int> ar ={1,2,3,3,5,6};
+    vector<int> ar = {1, 2, 3, 3, 5, 6};
 
-Solution a;
+    Solution a;
 
-cout<<a.findDuplicate(ar);
+    cout << a.findDuplicate(ar);
 }
