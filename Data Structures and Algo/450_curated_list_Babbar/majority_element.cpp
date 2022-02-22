@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <unordered_map>
 using namespace std;
 
 class cl
@@ -13,11 +14,12 @@ public:
     int majority_element(int a[], int size)
     {
 
-        map<int, int> count;
+        unordered_map<int, int> count;
         for (int i = 0; i < size; i++)
         {
             count[a[i]]++;
         }
+
 
         for (auto it : count)
         {
@@ -31,7 +33,7 @@ public:
 
 int main()
 {
-    int a[] = {1,2,3};
+    int a[] = {1,2,3,4,4,4,4};
     int size = sizeof(a) / sizeof(a[0]);
     cl obj;
     cout<<obj.majority_element(a, size);
