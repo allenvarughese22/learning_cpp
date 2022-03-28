@@ -1,0 +1,23 @@
+heap sort
+divide and conquer
+heapify (creation of heap from right to left in array ) the element are added as the procedure of deletion in heap... look downward..or move downward
+priority que use heap(min or max heap) only log n for insert and delete
+
+merge sort
+2-way merge sort(iterative)
+ T = o(nlogn) -> better than other sortingv 
+m-way merge(not used much)
+
+multiplication of matrix
+3 for loop (n cube)
+divide and concur also ncube
+
+strassen finding 2*2 matrix by 7 multiplication instead of naive 8 multiplication
+o(n^2.81)
+
+
+optimization problem
+*greedy
+*dynamic
+*bound
+
