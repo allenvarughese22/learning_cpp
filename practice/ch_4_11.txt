@@ -1,0 +1,5 @@
+Use the time structure from Exercise 9, and write a program that obtains two time values
+from the user in 12:59:59 format, stores them in struct time variables, converts
+each one to seconds (type int), adds these quantities, converts the result back to hoursminutes-
+seconds, stores the result in a time structure, and finally displays the result in
+12:59:59 format.
